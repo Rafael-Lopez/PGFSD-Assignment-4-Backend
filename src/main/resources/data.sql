@@ -1,3 +1,5 @@
+insert into user(username, password, role) values ('admin', '123', 'admin');
+
 insert into product(name, price, description) values ('Cheese', 3, 'Goat cheese');
 insert into product(name, price, description) values ('Onion', 1, 'Jumbo yellow onion');
 insert into product(name, price, description) values ('Tomato', .8, 'Organic cherry tomato');
