@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScans({
 		@ComponentScan("com.lopez.rafael.config"),
 		@ComponentScan("com.lopez.rafael.controller"),
+		@ComponentScan("com.lopez.rafael.service"),
 })
 @EntityScan("com.lopez.rafael.model")
 @EnableJpaRepositories("com.lopez.rafael.repository")
