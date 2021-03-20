@@ -36,8 +36,17 @@ public class AdminUserDetailsManager implements UserDetailsManager {
     }
 
     @Override
-    public void changePassword(String s, String s1) {
+    public void changePassword(String username, String password) {
+        List<User> users = userRepository.findByUsername(username);
 
+        if(users.isEmpty()) {
+            throw  new UsernameNotFoundException("User details not found for username :" + username);
+        }
+
+        User user = users.get(0);
+        user.setPassword(password);
+
+        userRepository.save(user);
     }
 
     @Override

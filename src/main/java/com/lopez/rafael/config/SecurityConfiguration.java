@@ -17,6 +17,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .cors().and().csrf().disable()
                 // We have to disable csrf Protection because it is enabled by default in spring security
                 .authorizeRequests()
+                    .antMatchers("/admin").authenticated()
                     .antMatchers("/product").authenticated()
                     .antMatchers("/products").permitAll()
                 .and()
